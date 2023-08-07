@@ -3,7 +3,11 @@
 Kevin Cunningham
 August 2023
 
-Miro:
+Miro: https://miro.com/app/board/uXjVMwF93CU=/
+
+Timings: 
+- 7-9.30am (BST) / 11.30-2pm (IST)
+- 12.30-2.30pm (BST) / 5pm-7pm (IST)
 
 ### Intro and Setup
 - **Learning Objectives:** Establish course expectations, gauge participants' existing knowledge, clarify goals, and ensure proper environment setup.
