@@ -74,8 +74,6 @@ Timings:
 - **Learning Objectives:** Understand how to work with local storage in Angular for state management and data persistence.
 - **Summary:** Practical guidance on using local storage in Angular applications, including common use cases, best practices, and considerations for security.
 
-Certainly! Standalone components can be treated differently from modules, as they focus more on individual, reusable parts of the user interface, and encapsulating specific functionality. Here's the revised outline for a workshop focused on standalone components:
-
 ### Optional Session: Building Standalone Components in Angular
 
 - **Learning Objectives:**
