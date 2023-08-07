@@ -1,0 +1,36 @@
+<p>greeting works!</p>
+
+<p>{{name}} is in {{location}}.</p>
+
+<p>
+	<button [disabled]="isDisabled">Click me!</button>
+</p>
+
+<p>
+	<button (click)="handleClick()">Click me too!</button>
+</p>
+
+<p (mouseenter)="handleClick()">Test</p>
+
+<input type="number" [(ngModel)]="num1" /> 
+<input type="number" [(ngModel)]="num2" />
+
+<p>
+	{{ result }}
+</p>
+
+<div>
+	<button (click)="handleAdd()">Add</button>
+	<button (click)="handleSubtract()">Subtract</button>
+
+</div>
+
+<!-- ngForms 
+
+- ngModel
+- ngForm
+- ngModelGroup
+- ngControlStatus
+
+- FormGroup
+-  -->
