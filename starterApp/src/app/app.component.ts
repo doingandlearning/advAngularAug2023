@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'starterApp';
   name = 'Kevin';
+  chocRating = 3;
+
+  handleChange(event: number) {
+    this.chocRating = event;
+  }
 }

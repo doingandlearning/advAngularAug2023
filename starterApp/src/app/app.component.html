@@ -1,9 +1,17 @@
-
+<!-- 
 
 Interpolate/Load Angular - {{ 1 + 1 }}
 
 <p>
   {{ name | uppercase }}
-</p>
+</p> -->
 
-<app-greeting></app-greeting>
+<!-- <app-greeting></app-greeting> -->
+
+<app-rating
+  [maxRating]="10"
+  [currentRating]="chocRating"
+  (ratingChange)="handleChange($event)"
+></app-rating>
+
+<p>Chocolate rating: {{ chocRating }}</p>

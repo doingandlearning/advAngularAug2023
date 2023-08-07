@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { CalculatorService } from '../services/calculator.service';
 
 @Component({
   selector: 'app-greeting',
   templateUrl: './greeting.component.html',
   styleUrls: ['./greeting.component.css'],
+  providers: [],
 })
 export class GreetingComponent {
   name = 'Renuka';
@@ -14,7 +15,10 @@ export class GreetingComponent {
   num2: number = 0;
   result = 0;
 
-  constructor(private calculator: CalculatorService) {}
+  constructor(
+    private calculator: CalculatorService,
+    @Inject('API_URL') public apiKey: string
+  ) {}
 
   handleClick() {
     console.log('Clicked!');
