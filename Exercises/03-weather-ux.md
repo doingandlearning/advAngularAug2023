@@ -1,6 +1,3 @@
-Absolutely! If we're tailoring the lab for beginners with knowledge only up to `ngModel`, we can simplify the lab by eliminating the dependency on Angular forms and focusing more on the core concepts. Let's revise the lab accordingly:
-
----
 
 ## Lab: Building a Simple Weather App with Angular
 
