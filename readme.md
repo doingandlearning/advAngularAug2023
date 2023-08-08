@@ -23,7 +23,7 @@ Timings:
 
 ### User Experience
 - **Learning Objectives:** Create a consistent and modern user experience, de-bounce fields, and understand quality-of-service for UI.
-- **Summary:** Techniques for crafting engaging user experiences, ensuring quality interaction, and implementing responsive designs in Angular.
+- **Summary:** Techniques for crafting engaging user experiences, ensuring quality interaction, and implementing responsive designs in Angular.z
 
 ### Routing
 - **Learning Objectives:** Design meaningful client-side routes, pass data efficiently, explore custom events, and large-scale apps.

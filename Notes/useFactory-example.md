@@ -13,7 +13,7 @@ Let's say you have two different logging services for two different clients or t
 ```typescript
 // gold-log.service.ts
 @Injectable()
-export class GoldLogService {
+export class GoldLogService implements ___ {
   log(message: string) {
     console.log(`Gold Logger: ${message}`);
   }
@@ -21,7 +21,7 @@ export class GoldLogService {
 
 // silver-log.service.ts
 @Injectable()
-export class SilverLogService {
+export class SilverLogService implements ___ {
   log(message: string) {
     console.log(`Silver Logger: ${message}`);
   }
