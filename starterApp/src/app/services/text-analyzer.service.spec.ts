@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { TextAnalyzerService } from './text-analyzer.service';
+import { LoggerService } from './logger.service';
 
 describe('TextAnalyzerService', () => {
   let service: TextAnalyzerService;
@@ -11,7 +12,7 @@ describe('TextAnalyzerService', () => {
     TestBed.configureTestingModule({
       providers: [
         TextAnalyzerService,
-        { provide: 'LoggerService', useValue: loggerSpy },
+        { provide: LoggerService, useValue: loggerSpy },
       ],
     });
     service = TestBed.inject(TextAnalyzerService);
@@ -31,6 +32,6 @@ describe('TextAnalyzerService', () => {
     // Assert
     expect(result.characterCount).toBe(23);
     expect(result.wordCount).toBe(5);
-    expect(loggerSpy.log).toHaveBeenCalledTimes(1); // Why???
+    expect(loggerSpy.log).toHaveBeenCalledTimes(1); // Why?
   });
 });

@@ -1,1 +1,31 @@
-<p>list works!</p>
+<div *ngFor="let item of people; trackBy: trackById" class="fade-in">
+	<span>{{item.name}}</span>
+	<div>
+		<input [(ngModel)]="item.value">
+	</div>
+	<button (click)="removeItem(item.id)">Remove</button>
+</div>
+
+*ngIf vs [hidden]
+<p *ngIf="show">I want to hide this paragraph.</p>
+<p [hidden]="!show" aria-label="This is a paragraph that toggles display">I want to hide this paragraph.</p>
+
+<button (click)="show = !show">Change</button>
+
+{{show}}
+
+<h2>
+	ARIA - Accessible Rich Internet Applications
+</h2>
+
+- Roles
+<div role="button" (click)="show = !show">Click me</div>
+
+
+- States and Properties
+
+
+- Labelling and describing
+
+<button aria-controls="contentId">Toggle Content</button>
+<div id="contentId">Content that is being toggled</div>
