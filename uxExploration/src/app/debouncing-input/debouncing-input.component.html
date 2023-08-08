@@ -11,10 +11,7 @@
 </div>
 
 <div *ngIf="results$ | async as results">
-	<div>{{ results | json }}</div>
-	<div *ngIf="results.query.searchInfo.totalHits === 0">
-		Sorry, no results for that term.
-	</div>
+
 	<ul>
 		<li *ngFor="let item of results.query.search">
 			<h4>{{item.title}}</h4>
