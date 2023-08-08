@@ -8,6 +8,7 @@ import { CalculatorService } from './services/calculator.service';
 import environments from 'src/environment';
 import { LoggerService } from './services/logger.service';
 import { RatingComponent } from './rating/rating.component';
+import { ToggleSwitchComponent } from './toggle-switch/toggle-switch.component';
 
 const environment = 'production';
 
@@ -22,7 +23,7 @@ const environment = 'production';
 // }
 
 @NgModule({
-  declarations: [AppComponent, GreetingComponent, RatingComponent],
+  declarations: [AppComponent, GreetingComponent, RatingComponent, ToggleSwitchComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [
     CalculatorService,
