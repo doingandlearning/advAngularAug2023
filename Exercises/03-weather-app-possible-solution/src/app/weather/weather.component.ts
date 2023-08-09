@@ -3,6 +3,7 @@ import { FormControl } from "@angular/forms";
 import { tap } from "rxjs/operators";
 import { WeatherServiceService } from "../weather-service.service";
 import { Observable } from "rxjs";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-weather",
@@ -17,16 +18,25 @@ export class WeatherComponent implements OnInit {
   isLoading = false;
   imgSrc = "";
 
-  constructor(private weatherService: WeatherServiceService) {}
+  constructor(
+    private weatherService: WeatherServiceService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
+    this.cityField.setValue(
+      this.route.snapshot.paramMap.get("city") || "Chennai"
+    );
+    this.countryField.setValue(
+      this.route.snapshot.paramMap.get("country") || "India"
+    );
     this.getWeather();
   }
 
   getWeather() {
     const city = this.cityField.value;
     const country = this.countryField.value;
-    const units = this.unitsField.value;
+    const units = this.unitsField.value || "metric";
 
     if (!city || !country) {
       return;

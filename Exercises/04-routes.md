@@ -34,9 +34,18 @@ You can either extend the application solution application that I provide or you
    ```typescript
    canActivate(route: ActivatedRouteSnapshot): boolean {
      const token = route.queryParams['token'];
-     return !!token;
+     return Boolean(token); // !!token
    }
    ```
+
+	If it's a functional (rather than class based) guard then it's more likely to look something like this:
+
+	```typescript
+	export const authGuard: CanActivateFn = (route, state) => {
+		const queryParams = route.queryParams;
+		return Boolean(queryParams['token'])
+	};
+	```
 
    Modify the route in `app-routing.module.ts` to use this guard:
    ```typescript

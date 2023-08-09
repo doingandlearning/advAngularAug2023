@@ -4,12 +4,16 @@ import { DebouncedSearchComponent } from "./debounced-search/debounced-search.co
 import { HarnessComponent } from "./harness/harness.component";
 import { HomeComponent } from "./home/home.component";
 import { WeatherComponent } from "./weather/weather.component";
+import { AuthTokenGuard } from "./auth-token.guard";
 
 const routes: Routes = [
   { path: "home", component: HomeComponent },
-  { path: "harness", component: HarnessComponent },
   { path: "weather", component: WeatherComponent },
-  { path: "wiki", component: DebouncedSearchComponent },
+  {
+    path: "weather/:city/:country",
+    component: WeatherComponent,
+    canActivate: [AuthTokenGuard],
+  },
 ];
 
 @NgModule({
