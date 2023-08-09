@@ -1,0 +1,15 @@
+<section>
+  <h3>Default Data Component Instance</h3>
+  <app-data (myEvent)="handleCustomEvent($event)"></app-data>
+
+  <h3>Data Component Instance with config options set</h3>
+  <app-data
+    fieldLabelA="custfieldLabelA"
+    fieldLabelB="custfieldLabelB"
+    placeTextA="Enter Category ID"
+    placeTextB="custplaceTextB"
+    (myEvent)="handleCustomEvent($event)"
+  ></app-data>
+</section>
+<hr />
+<aside>{{ monitor | json }}</aside>

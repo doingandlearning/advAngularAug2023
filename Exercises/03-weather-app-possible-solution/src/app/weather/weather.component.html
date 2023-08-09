@@ -1,0 +1,22 @@
+<input placeholder="Enter city (e.g. London)" [formControl]="cityField" />
+<input placeholder="Enter country (e.g. UK)" [formControl]="countryField" />
+
+<select [formControl]="unitsField">
+	<option value="metric">Celcius</option>
+	<option value="kelvin">Kelvin</option>
+</select>
+
+<button (click)="getWeather()">Get weather</button>
+
+<div *ngIf="isLoading">
+	Loading
+	
+</div>
+
+<div *ngIf="results$ | async as results">
+	<h2>Here is the weather for {{results.name}}, {{results.sys.country}}:</h2>
+	<p>Temperature: {{results.main.temp}}</p>
+	<img [src]="imgSrc" />
+	<p>Weather Description: {{results.weather[0].description}}</p>
+	<pre>{{results | json}}</pre>
+</div>

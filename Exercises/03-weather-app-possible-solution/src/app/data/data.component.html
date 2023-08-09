@@ -1,0 +1,8 @@
+<section>
+  <label [for]="fieldLabelA">{{fieldLabelA}}</label><br/>
+  <input [id]="fieldLabelA" [placeholder]='placeTextA' [(ngModel)]="valueA"><br/>
+  <label [for]="fieldLabelB">{{fieldLabelB}}</label><br/>
+  <input [id]="fieldLabelB" [placeholder]='placeTextB' [(ngModel)]="valueB"><br/>
+  <button (click)='handleClick()' >{{buttonLabel}}</button>
+</section>
+

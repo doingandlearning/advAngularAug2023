@@ -5,7 +5,7 @@
 Develop a user-friendly weather application that fetches data from an external API using just basic Angular concepts and `ngModel`. This app will help you grasp the basics of data binding, component communication, and simple HTTP requests.
 
 ### Objectives:
-- Capture user input using `ngModel`.
+- Capture user input using `ngModel` or FormControl
 - Make HTTP requests to fetch data.
 - Display the fetched data.
 
@@ -24,7 +24,7 @@ Develop a user-friendly weather application that fetches data from an external A
 
 > We need to ask the user for 'city' and 'country' values, then fetch a weather report from
 
-> http://api.openweathermap.org/data/2.5/weather?q=sofia,bg&APPID=48f2d5e18b0d2bc50519b58cce6409f1&units=metric
+> http://api.openweathermap.org/data/2.5/weather?q=chennai,in&APPID=48f2d5e18b0d2bc50519b58cce6409f1&units=metric
 
 > (Replace sofia, bg with city and country as entered by the user)
 

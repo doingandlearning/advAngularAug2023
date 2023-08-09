@@ -1,0 +1,8 @@
+<div>
+  <input type="text" [formControl]="searchControl" placeholder="Search" />
+</div>
+
+<div *ngIf="results$ | async as results">
+  {{results| json}}
+</div>
+
