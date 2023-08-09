@@ -9,6 +9,7 @@ import {
 import { Observable } from "rxjs";
 
 export const AuthTokenGuard: CanActivateFn = (route, state) => {
+  // const authService = inject()
   const queryParams = route.queryParams;
   return Boolean(queryParams["token"]);
 };
