@@ -37,9 +37,18 @@ Timings:
 - **Learning Objectives:** Master ideal validation techniques, understand template-driven and reactive forms, and explore real-world examples of data-driven forms.
 - **Summary:** A comprehensive guide to working with forms in Angular, focusing on validation techniques, different types of forms, and practical examples.
 
-### Data Modeling
+// Simulate a CSRF attack
+
+
+
+### Data Modeling & Performance
 - **Learning Objectives:** Deal with large and rapidly changing data sets, optimize renderers, explore custom class inheritance, and understand when to use Promises or Observables.
 - **Summary:** Deep dive into managing data in Angular applications, including handling large data sets, enhancing performance, and using custom class inheritance.
+
+- Change Detection Strategy [Default, OnPush]
+- including tree shaking, lazy loading, and code splitting.
+- focusing on optimization at the code and architectural levels
+- Lifecycle hooks - ngOnInit - why and when would we use the other hooks?
 
 ### Full-Stack ECMAScript
 - **Learning Objectives:** Explore real-world examples using server and client-side ECMAScript, and understand trends in noSQL data storage, Node, and related technologies.

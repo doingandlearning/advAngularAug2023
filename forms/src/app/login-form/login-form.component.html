@@ -1,0 +1,33 @@
+<form (ngSubmit)="onSubmit(userForm.value)" #userForm="ngForm">
+	<div>
+		<label for="username" class="sr-only">Username: </label>
+		<input 
+			type="text" 
+			name="username" 
+			id="username" 
+			[(ngModel)]="user.username" 
+			placeholder="Enter username" 
+			required 
+		/>
+	</div>
+	<div>
+		<label for="username" class="sr-only">Password: </label>
+		<input 
+			type="password" 
+			id="password" 
+			[(ngModel)]="user.password" 
+			placeholder="Enter password" 
+			name="password"
+			required
+			minlength="6"
+		/>
+		
+		<!-- <div *ngIf="userForm.controls.password?.errors?.minlength">Password should be more than 6 characters.</div> -->
+	</div>
+	<div *ngIf="userForm.valid">All looks good and ready to submit!</div>
+	<div *ngIf="userForm.pristine">I'm pristine</div>
+	<div *ngIf="userForm.dirty">I'm dirty</div>
+	<div *ngIf="userForm.invalid">I'm invalid</div>
+
+	<button type="submit" [disabled]="userForm.invalid">Submit</button>
+</form>
