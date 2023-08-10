@@ -1,0 +1,8 @@
+<button (click)="1">Click</button>
+<div *ngIf="user && user.id !==0">
+  <p>Name: {{ user.name }}</p>
+  <p>Age: {{ user.age }}</p>
+  
+  <!-- Button to simulate updating the user's name -->
+  <button (click)="updateName('UpdatedName')">Update Name</button>
+</div>
