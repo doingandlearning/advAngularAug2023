@@ -1,0 +1,7 @@
+<div *ngIf="users$ | async as users">
+	<cdk-virtual-scroll-viewport itemSize="10" class="example-viewport">
+		<div *cdkVirtualFor="let user of users">
+			<app-user-detail [userData]="user"></app-user-detail>
+		</div>
+	</cdk-virtual-scroll-viewport>
+</div>

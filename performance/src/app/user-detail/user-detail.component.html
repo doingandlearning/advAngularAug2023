@@ -1,0 +1,7 @@
+<div>
+	<img [src]="userData.avatar" alt="User Avatar" loading="lazy">
+	<p><strong>Username:</strong> {{ userData.username }}</p>
+	<p><strong>Email:</strong> {{ userData.email }}</p>
+	<p><strong>Birthdate:</strong> {{ userData.birthdate | date }}</p>
+	<p><strong>Registered At:</strong> {{ userData.registeredAt | date }}</p>
+</div>

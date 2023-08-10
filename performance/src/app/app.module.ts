@@ -6,19 +6,29 @@ import { AppComponent } from './app.component';
 import { DefaultComponent } from './default/default.component';
 import { OnPushComponent } from './on-push/on-push.component';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UserListComponent } from './user-list/user-list.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
     AppComponent,
     DefaultComponent,
     OnPushComponent,
-    LifeCycleComponent
+    LifeCycleComponent,
+    UserListComponent,
+    UserDetailComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ScrollingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
