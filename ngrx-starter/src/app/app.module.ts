@@ -7,6 +7,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ProductsComponent } from './products/products.component';
 import { HeaderComponent } from './header/header.component';
 import { StoreModule } from '@ngrx/store';
+import { cartReducer } from './cart-state-store/cart.reducers';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,11 @@ import { StoreModule } from '@ngrx/store';
     ProductsComponent,
     HeaderComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [pro
+    BrowserModule,
+    AppRoutingModule,
+    StoreModule.forRoot({ cartEntries: cartReducer }),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

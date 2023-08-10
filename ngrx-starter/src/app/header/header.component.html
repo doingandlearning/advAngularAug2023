@@ -7,6 +7,6 @@
     <a routerLink="/cart"><img src="../../assets/cart.png" ></a>
   </div>
   <div class="counter">Counter: {{countProducts$ | async | number }}</div>
-  <div class="total-price">Total Price: {{ totalPrice$ | async | number: '1.2-2'}}</div>
+  <div class="total-price">Total Price: £{{ totalPrice$ | async | number: '1.2-2'}}</div>
   <button (click)="handleClearCart()"> Clear cart</button>
 </div>

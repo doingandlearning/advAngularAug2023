@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import { selectTotalPrice } from '../cart-state-store/cart.selectors';
+import { clearEntries } from '../cart-state-store/cart.actions';
 
 @Component({
   selector: 'app-header',
@@ -11,10 +13,12 @@ export class HeaderComponent {
   countProducts$: Observable<number>;
   totalPrice$: Observable<number>;
 
-  constructor() {
+  constructor(private store: Store) {
     this.countProducts$ = new Observable((sub) => sub.next(0));
-    this.totalPrice$ = new Observable((sub) => sub.next(0));
+    this.totalPrice$ = store.select(selectTotalPrice);
   }
 
-  handleClearCart() {}
+  handleClearCart() {
+    this.store.dispatch(clearEntries());
+  }
 }
