@@ -7,19 +7,7 @@ import { Component, Input, SimpleChange } from '@angular/core';
 })
 export class LifeCycleComponent {
   @Input() data: any;
-  themeSettings = {
-    primaryColor: 'blue',
-    secondaryColor: 'red',
-    fontSize: '16px',
-  };
 
-  previousSettings = { ...this.themeSettings };
-
-  didThemeSettingsChange(): boolean {
-    return Object.keys(this.themeSettings).some(
-      (key) => this.previousSettings[key] !== this.themeSettings[key]
-    );
-  }
   ngOnInit() {
     console.log('ngOnInit called ....');
     // subscribe
@@ -34,14 +22,7 @@ export class LifeCycleComponent {
     console.log('ngOnChanges was called', changes);
   }
 
-  ngDoCheck() {
-    console.log('ngDoCheck called');
-    if (this.didThemeSettingsChange()) {
-      console.log('Theme settings have changed!');
-      // Update any necessary parts of your component or execute any logic.
-      this.previousSettings = { ...this.themeSettings };
-    }
-  }
+  ngDoCheck() {}
 
   ngAfterContentInit() {
     // ng-content
